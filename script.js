@@ -12,7 +12,7 @@ const checkbox = document.createElement("input");
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Modern TODO App</title>
-<link rel="stylesheet" href="style2.css">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
@@ -27,7 +27,7 @@ placeholder="What needs to be done?"
 </div>
 <ul id="taskList"></ul>
 </div>
-<script src="script2.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
 
