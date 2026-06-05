@@ -5,31 +5,6 @@ function createTask(taskText) {
 const li = document.createElement("li");
 li.classList.add("task");
 const checkbox = document.createElement("input");
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Modern TODO App</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="container">
-<h1>📝 My TODO List</h1>
-<div class="todo-input">
-<input
-type="text"
-id="taskInput"
-placeholder="What needs to be done?"
->
-<button id="addBtn">Add Task</button>
-</div>
-<ul id="taskList"></ul>
-</div>
-<script src="script.js"></script>
-</body>
-</html>
-
 checkbox.type = "checkbox";
 const span = document.createElement("span");
 span.classList.add("task-text");
@@ -37,8 +12,19 @@ span.textContent = taskText;
 checkbox.addEventListener("change", () => {
 span.classList.toggle("completed", checkbox.checked);
 });
+const actions = document.createElement("div");
+actions.classList.add("actions");
+const deleteBtn = document.createElement("button");
+deleteBtn.textContent = "Delete";
+deleteBtn.classList.add("delete-btn");
+
+deleteBtn.addEventListener("click", () => {
+li.remove();
+});
+actions.appendChild(deleteBtn);
 li.appendChild(checkbox);
 li.appendChild(span);
+li.appendChild(actions);
 taskList.appendChild(li);
 }
 function addTask() {
